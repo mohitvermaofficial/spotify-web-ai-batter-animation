@@ -1,165 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
- <link rel="icon" href="./logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./logo.png" />
+
   <title>Spotify - Web Player: Music for everyone</title>
 </head>
 <body>
   <div class="main">
-    <div class="sidebar">
-      <div class="nav">
-        <div class="nav-option" style="opacity: 1;">
-              <i class="fa-solid fa-house"></i>
-              <a href="#" >Home</a>
+    <aside class="sidebar">
+      <nav class="nav">
+        <a class="nav-option active" href="#">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+
+        <a class="nav-option" href="#">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+        </a>
+      </nav>
+
+      <section class="library">
+        <div class="options">
+          <a class="lib-option" href="#">
+            <img src="./library_icon.png" alt="Library" />
+            <span>Your Library</span>
+          </a>
+
+          <div class="icons">
+            <button type="button" aria-label="Create library item"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" aria-label="Open library"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
         </div>
-         <div class="nav-option">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <a href="#" >Search</a>
+
+        <div class="lib-boxes">
+          <article class="box">
+            <p class="box-p1">Create your first playlist</p>
+            <p class="box-p2">It&apos;s easy, we&apos;ll help you.</p>
+            <button class="badge" type="button">Create playlist</button>
+          </article>
+
+          <article class="box">
+            <p class="box-p1">Let&apos;s find some podcasts to follow</p>
+            <p class="box-p2">We&apos;ll keep you updated on new episodes.</p>
+            <button class="badge" type="button">Browse podcasts</button>
+          </article>
         </div>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="sticky-nav">
+        <div class="sticky-nav-icons">
+          <button type="button" aria-label="Go back"><img src="./backward_icon.png" alt="" /></button>
+          <button type="button" aria-label="Go forward" class="hide"><img src="./forward_icon.png" alt="" /></button>
         </div>
-      <div class="library">
-        <div class="options nav-option">
-          <div class="lib-option">
-              <img src="./library_icon.png">
-              <a href="#" >Your Library</a>
-          </div>
-      <div class="icons">
-              <i class="fa-solid fa-plus"></i>
-              <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          </div>
-      <div class="lib-boxe">
-          <div class="box">
-              <p class="box-p1">creat your first playlist</p>
-              <p class="box-p2">lets get you started</p>
-              <button class="badge">create playlist</button>
-          </div>
-      <div class="box">
-              <p class="box-p1">let's find some podcasts to follow</p>
-              <p class="box-p2">we'll updated to you on new episodes</p>
-              <button class="badge">browse podcasts</button>
-         </div>
-          </div>
-           </div>
+
+        <div class="sticky-nav-options">
+          <button class="badge nav-item hide" type="button">Explore Premium</button>
+          <button class="badge nav-item dark" type="button"><i class="fa-regular fa-circle-down"></i> Install App</button>
+          <button class="user-btn nav-item" type="button" aria-label="User profile"><i class="fa-regular fa-circle-user"></i></button>
+        </div>
+      </header>
+
+      <section class="content-section">
+        <h2>Recently Played</h2>
+        <div class="card-container">
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card1img.jpeg" class="card-img" alt="Top 50 Global" />
+              <button class="card-play" type="button" aria-label="Play Top 50 Global"><i class="fa-solid fa-play"></i></button>
             </div>
-     <div class="main-content">
-         <div class="sticky-nav">
-         <div class="sticky-nav-icons">
-             <img src="/backward_icon.png">
-             <img src="/forward_icon.png" class="hide">
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily update of the most played tracks right now.</p>
+          </article>
         </div>
-          <div class="sticky-nav-options">
-               <button class="badge nav-item hide">Explore Premium</button>
-               <button class="badge nav-item dark"> <i class="fa-regular fa-circle-down" style="margin-right: 0.5rem;"></i>Install App</button>
-               <i class="fa-regular fa-circle-user nav-item"></i>
-         </div>
-          </div>
-             <h2>Recently Played</h2>
-     <div class="card-container">
-         <div class="card">
-             <img src="/card1img.jpeg" class="card-img">
-             <p class="card-title">Top 50- Global</p>
-             <p class="card-info">Your daily update onmost played songs this week...</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Trending now near you</h2>
+        <div class="card-container">
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card2img.jpeg" class="card-img" alt="Mahiye Jinna Sohna" />
+              <button class="card-play" type="button" aria-label="Play Mahiye Jinna Sohna"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Mahiye Jinna Sohna</p>
+            <p class="card-info">Darshan Raval&apos;s romantic hit for late-night vibes.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card3img.jpeg" class="card-img" alt="Mere Paas Tum Ho Lofi Mix" />
+              <button class="card-play" type="button" aria-label="Play Mere Paas Tum Ho"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Mere Paas Tum Ho - Lofi Mix</p>
+            <p class="card-info">Soft lofi version for calm, emotional listening.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card4img.jpeg" class="card-img" alt="Naa Ready" />
+              <button class="card-play" type="button" aria-label="Play Naa Ready"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Naa Ready</p>
+            <p class="card-info">High-energy Tamil hit from Leo for party mood.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card3img.jpeg" class="card-img" alt="Mere Paas Tum Ho Lofi Mix" />
+              <button class="card-play" type="button" aria-label="Play Mere Paas Tum Ho"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Mere Paas Tum Ho - Lofi Mix</p>
+            <p class="card-info">Soft lofi version for calm, emotional listening.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card2img.jpeg" class="card-img" alt="Mahiye Jinna Sohna" />
+              <button class="card-play" type="button" aria-label="Play Mahiye Jinna Sohna"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Mahiye Jinna Sohna</p>
+            <p class="card-info">Darshan Raval&apos;s romantic hit for late-night vibes.</p>
+          </article>
         </div>
-         </div>
-           <h2>tranding now near you </h2>
-     <div class="card-container">
-          <div class="card">
-              <img src="/card2img.jpeg" class="card-img">
-              <p class="card-title">Mahiye Jinna Sohna</p>
-              <p class="card-info">Darshan Ravals romantic hit for late-night vibes.</p>
-       </div>
-     <div class="card">
-          <img src="/card3img.jpeg" class="card-img">
-          <p class="card-title">Mere Paas Tum Ho - Lofi Mix</p>
-          <p class="card-info">Soft lofi version for calm, emotional listening.</p>
-          </div>
-     <div class="card">
-          <img src="/card4img.jpeg" class="card-img">
-          <p class="card-title">Naa Ready</p>
-          <p class="card-info">High-energy Tamil hit from Leo for party mood.</p>
-       </div>
-     <div class="card">
-          <img src="/card3img.jpeg" class="card-img">
-          <p class="card-title">Mere Paas Tum Ho - Lofi Mix</p>
-          <p class="card-info">Soft lofi version for calm, emotional listening..</p>
-       </div>
-     <div class="card">
-          <img src="/card2img.jpeg" class="card-img">
-          <p class="card-title">Mahiye Jinna Sohna</p>
-          <p class="card-info">Darshan Ravals romantic hit for late-night vibes.</p>
-       </div>
-        </div>
-           <h2>Featured charts</h2>
-     <div class="card-container">
-         <div class="card">
-            <img src="/card5img.jpeg" class="card-img">
-            <p class="card-title">Top Songs- Global</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Featured charts</h2>
+        <div class="card-container">
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card5img.jpeg" class="card-img" alt="Top Songs Global" />
+              <button class="card-play" type="button" aria-label="Play Top Songs Global"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Top Songs - Global</p>
             <p class="card-info">Weekly chart of the biggest songs around the world.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card6img.jpeg" class="card-img" alt="Top Songs India" />
+              <button class="card-play" type="button" aria-label="Play Top Songs India"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Top Songs - India</p>
+            <p class="card-info">The most streamed songs in India this week.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-cover">
+              <img src="./card1img.jpeg" class="card-img" alt="Top 50 Global" />
+              <button class="card-play" type="button" aria-label="Play Top 50 Global"><i class="fa-solid fa-play"></i></button>
+            </div>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily update of the most played tracks right now.</p>
+          </article>
         </div>
-     <div class="card">
-          <img src="/card6img.jpeg" class="card-img">
-          <p class="card-title">Top Songs- India</p>
-          <p class="card-info">The most streamed songs in India this week.</p>
-        </div>
-     <div class="card">
-          <img src="/card1img.jpeg" class="card-img">
-          <p class="card-title">Top 50- Global</p>
-          <p class="card-info">Your daily update of the most played tracks right now.</p>
-       </div>
-       </div>
-     <div class="footer">
-          <div class="line"></div>
-        </div>
-         </div>
-          </div>
-     <div class="music-player">
-         <div class="album">
-             <img src="/card4img.jpeg" alt="Album Art">
-     <div class="album-text">
-          <p class="s-name">Naa Ready</p>
-          <p class="a-name">Anirudh Ravichander</p>
-        </div>
-     <div class="album-icon">
-           <i class="fa-regular fa-heart"></i>
-           <i class="fa-solid fa-tablet-screen-button"></i>
-        </div>
-          </div>
-    <div class="player">
-        <div class="player-controls">
-              <img src="./player_icon1.png" class="player-control-icon">
-              <img src="./player_icon2.png" class="player-control-icon">
-              <img src="./player_icon3.png" class="player-control-icon play-btn">
-              <img src="./player_icon4.png" class="player-control-icon">
-              <img src="./player_icon5.png" class="player-control-icon">
-       </div>
-           <div class="playback-bar">
-              <span class="currnt-time">00:00</span> 
-              <input type="range" min="0" max="100" class="progress-bar">
-              <span class="total-time">3:33</span> 
-           </div>
-              
-        </div>
-    <div class="control">
-      <div class="control-icons">
-        <i class="fa-solid fa-video control-icon"></i>
-         <i class="fa-solid fa-microphone control-icon"></i>
-          <i class="fa-solid fa-list control-icon"></i>
-           <i class="fa-solid fa-computer control-icon"></i>
+      </section>
+
+      <footer class="footer">
+        <div class="line"></div>
+      </footer>
+    </main>
+  </div>
+
+  <footer class="music-player">
+    <div class="album">
+      <img src="./card4img.jpeg" alt="Naa Ready album art" />
+      <div class="album-text">
+        <p class="s-name">Naa Ready</p>
+        <p class="a-name">Anirudh Ravichander</p>
       </div>
-      <div class="control-vol">
-        <i class="fa-solid fa-volume-high control-icon"></i>
-          <input type="range" min="0" max="100" value="70" class="volume-bar">
+      <div class="album-icon">
+        <button type="button" aria-label="Like song"><i class="fa-regular fa-heart"></i></button>
+        <button type="button" aria-label="Open device"><i class="fa-solid fa-tablet-screen-button"></i></button>
       </div>
     </div>
-        </div>
-          </div>
+
+    <div class="player">
+      <div class="player-controls">
+        <button type="button" aria-label="Shuffle"><img src="./player_icon1.png" class="player-control-icon" alt="" /></button>
+        <button type="button" aria-label="Previous"><img src="./player_icon2.png" class="player-control-icon" alt="" /></button>
+        <button type="button" class="play-center" aria-label="Play"><img src="./player_icon3.png" class="player-control-icon play-btn" alt="" /></button>
+        <button type="button" aria-label="Next"><img src="./player_icon4.png" class="player-control-icon" alt="" /></button>
+        <button type="button" aria-label="Repeat"><img src="./player_icon5.png" class="player-control-icon" alt="" /></button>
+      </div>
+
+      <div class="playback-bar">
+        <span class="current-time">00:00</span>
+        <input type="range" min="0" max="100" value="38" class="progress-bar" aria-label="Song progress" />
+        <span class="total-time">3:33</span>
+      </div>
+    </div>
+
+    <div class="control">
+      <div class="control-icons">
+        <button type="button" aria-label="Video"><i class="fa-solid fa-video control-icon"></i></button>
+        <button type="button" aria-label="Lyrics"><i class="fa-solid fa-microphone control-icon"></i></button>
+        <button type="button" aria-label="Queue"><i class="fa-solid fa-list control-icon"></i></button>
+        <button type="button" aria-label="Connect to device"><i class="fa-solid fa-computer control-icon"></i></button>
+      </div>
+
+      <div class="control-vol">
+        <i class="fa-solid fa-volume-high control-icon"></i>
+        <input type="range" min="0" max="100" value="70" class="volume-bar" aria-label="Volume" />
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
